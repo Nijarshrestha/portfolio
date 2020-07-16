@@ -190,6 +190,26 @@ main {
   padding: 0.5rem;
   border-bottom: #4f99dd 5px solid; }
 
+.skill-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .skill-boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 0.5rem 1rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .skill-boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #4f99dd;
+      cursor: pointer;
+      color: #000; }
+      .skill-boxes div:hover span {
+        color: #000; }
+
 .projects {
   display: grid;
   grid-gap: 0.7rem;
@@ -201,6 +221,26 @@ main {
       opacity: 0.5;
       border-color: #4f99dd;
       transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #4f99dd;
+      cursor: pointer;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -226,10 +266,19 @@ main {
   color: #fff; }
 
 @media screen and (min-width: 1171px) {
+  .about-info {
+    grid-template-areas: "bioimage bio" "job1";
+    grid-template-columns: repeat(1, 1fr); }
+    .about-info .job1 {
+      grid-area: job1;
+      width: 100px !important; }
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  .about-info {
+    grid-template-areas: "bioimage bio" "job1 job2 job3";
+    grid-template-columns: repeat(1, 1fr); }
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
